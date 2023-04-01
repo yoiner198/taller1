@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace E5
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var a = new Random();
+            int b =0;
+            int c = 0;
+            int[] numeros = new int[100];
+            for (int i = 0; i < 100; i++) {
+                numeros[i] = a.Next(1, 10);
+                if (numeros[i] == 1) { b++; }
+                else if (numeros[i] == 5) { b++; }
+                else if (numeros[i] == 10) { b++; }
+                else { c++; }
+                Console.WriteLine(numeros[i]);
+            }
+            Console.WriteLine($"Se imprimieron 100 valores aleatorios entre 1 y 10, de los cuales {b} son 1, 5 y 10; y {c} no lo son");
+            Console.ReadKey();
+
+        }
+    }
+}

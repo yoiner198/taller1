@@ -1,0 +1,51 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Ingrese el tamaño del vector: ");
+        int a = int.Parse(Console.ReadLine());
+
+        int[] vector = new int[a];
+
+        for (int i = 0; i < a; i++)
+        {
+            Console.Write("Ingrese el valor {0}: ", i + 1);
+            vector[i] = int.Parse(Console.ReadLine());
+        }
+
+        int menor = vector[0];
+
+        for (int i = 1; i < a; i++)
+        {
+            if (vector[i] < menor)
+            {
+                menor = vector[i];
+            }
+        }
+
+        Console.WriteLine("El número menor es: {0}", menor);
+
+        int contador = 0;
+
+        for (int i = 0; i < a; i++)
+        {
+            if (vector[i] == menor)
+            {
+                contador++;
+            }
+        }
+
+        if (contador > 1)
+        {
+            Console.WriteLine("El número {0} se repite {1} veces dentro del vector.", menor, contador);
+        }
+        else
+        {
+            Console.WriteLine("El número {0} no se repite dentro del vector.", menor);
+        }
+
+        Console.ReadLine();
+    }
+}

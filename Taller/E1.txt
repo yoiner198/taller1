@@ -1,0 +1,27 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("TIENDA DEPARTAMENTAL - OFERTA DE JEANS");
+        Console.WriteLine("¿CUANTOS JEANS DESEA LLEVAR?");
+        string jeansS = Console.ReadLine();
+        double precioJ = 65000;
+
+        int jeans = Convert.ToInt32(jeansS);
+
+        double precioP = jeans * precioJ;
+
+        if (jeans <= 2)
+        {
+            Console.WriteLine($"El precio a pagar es: {precioP}");
+        }
+        else
+        {
+            Console.WriteLine("Felicidades, ha recibido un descuento del 30%");
+            precioP = precioP - (precioP * 0.30);
+            Console.WriteLine($"El precio a pagar es:  {precioP}");
+        }
+        Console.ReadKey();
+    }
+
+}

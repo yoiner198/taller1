@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace E8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese la cantidad de personas a las que desea ingresar su altura");
+            int a = int.Parse(Console.ReadLine());
+            double[] alturas = new double[a];
+            double promedio = 0;
+            Console.WriteLine("Ingrese las alturas, use la coma (,) para indicar decimales");
+            for (int i = 0; i < a; i++)
+            {
+                Console.WriteLine($"Altura {i + 1}");
+                alturas[i] = double.Parse(Console.ReadLine());
+                promedio = promedio + alturas[i];
+            }
+            Console.WriteLine($"El promedio de alturas es de: {promedio / a}");
+            Console.ReadKey();
+        }
+    }
+}

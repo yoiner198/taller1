@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AreaCircle
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese el radio del circulo");
+
+            string radioCircle = Console.ReadLine();
+            int radio = Convert.ToInt32(radioCircle);
+            double areaCircle = (Math.PI) * (Math.Pow(radio, 2));
+            Console.WriteLine("El area es: " + areaCircle);
+
+           Console.ReadKey();  
+        }
+    }
+}

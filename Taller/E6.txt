@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace E6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string or1 = "Trabajó usted el ";
+            string or2 = " 1 = si 2 = no";
+            string[] dias = new string[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+            int laboral = 0;
+            int nolaboral = 0;
+            int respuesta = 0;
+            do
+            {
+                for (int i = 0; i <= 6; i++)
+                {
+                    Console.WriteLine(or1 + dias[i] + or2);
+                    respuesta = int.Parse(Console.ReadLine());
+                    if (respuesta == 1)
+                    {
+                         if (i >= 0 && i <= 4)
+                        {
+                            laboral++;
+                        }
+                        else
+                        {
+                            nolaboral++;
+                        }
+                    }
+                        
+                }
+
+                Console.WriteLine("Quiere continuar?"+or2);
+                respuesta = int.Parse(Console.ReadLine());
+            } while (respuesta == 1);
+
+            Console.WriteLine($"El empleado trabajó {laboral} dias laborales y {nolaboral} dias no laborales");
+            Console.ReadKey();
+
+        }
+    }
+}

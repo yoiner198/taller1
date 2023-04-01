@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace asd
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            String NomyAp;
+            Console.WriteLine("Ingrese el nombre y apellido dividio por /';/'");
+            NomyAp = Console.ReadLine();
+
+            int charPos = NomyAp.IndexOf(";");
+            string Apelido = NomyAp.Substring(charPos+1);
+
+            Console.WriteLine(Apelido);
+            Console.ReadKey();
+
+        }
+    }
+}

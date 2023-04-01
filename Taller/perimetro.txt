@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace perimetro
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("ingrese la base del rectangulo");
+            string basse = Console.ReadLine();
+            double baseRec = Convert.ToDouble(basse);
+
+            Console.WriteLine("ingrese la altura del rectangulo");
+            string altura = Console.ReadLine();
+            double alturaRec = Convert.ToDouble(altura);
+
+            double perimetro = 2 * (baseRec + alturaRec);
+            double area = baseRec * alturaRec;
+
+            Console.WriteLine("El perimetro del rectangulo es: " + perimetro + " y su area es: " + area);
+            Console.ReadKey();  
+        }
+    }
+}

@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace E22
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+
+        {
+            Console.WriteLine("Ingrese su edad");
+            string edadS = Console.ReadLine();
+            int edad = Convert.ToInt32(edadS);
+            Console.WriteLine("Usted pertence al grupo de: ");
+            if (edad > 0 && edad < 2)
+            {
+                Console.WriteLine("Bebés");
+            }
+            else if (edad >= 2 && edad < 12)
+            {
+                Console.WriteLine("Niños");
+            }
+            else if (edad >= 12 && edad < 18)
+            {
+                Console.WriteLine("Adolescentes");
+            }
+            else if (edad >= 18 && edad < 30) 
+            { 
+                Console.WriteLine("Adultos jóvenes");
+            }
+            else if(edad >= 30 && edad <65)
+            {
+                Console.WriteLine("Adultos");
+            }
+            else if(edad>=65 && edad < 122) //122 años es la edad maxima a la que ha vivivo un ser humano a dia de hoy
+            {
+                Console.WriteLine("Tercera edad");
+            }
+            else 
+                Console.WriteLine("ERROR");
+
+            Console.ReadKey();
+
+        }
+    }
+}

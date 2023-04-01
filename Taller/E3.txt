@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace E3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingrese un numero: ");
+            string num = Console.ReadLine();
+            double num1 = Convert.ToDouble(num);
+            Console.WriteLine("Ingrese un numero: ");
+            num = Console.ReadLine();
+            double num2 = Convert.ToDouble(num);
+            Console.WriteLine("Que operacion desea realizar con estos dos valores?");
+            
+            Console.WriteLine("1. suma\n"
+                            + "2. resta\n"
+                            + "3. multiplicacion\n"
+                            + "4. division");
+            num = Console.ReadLine();
+            int seleccion = Convert.ToInt32(num);
+            switch (seleccion) { 
+
+                case 1: 
+                    Console.WriteLine("El resultado de la suma es: "+(num1+num2));
+                    break;
+                case 2:
+                    Console.WriteLine("El resultado de la resta es: "+(num1-num2));
+                    break;
+                case 3:
+                    Console.WriteLine("El resultado de la multiplicacion es: "+(num1*num2));
+                    break;
+                case 4:
+                    Console.WriteLine("El resultado de ladivision es: "+(num1/num2));
+                    break;
+                default: Console.WriteLine("Opion invalida");
+                    break;
+            
+            }
+            Console.ReadKey();
+        }
+    }
+}
